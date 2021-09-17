@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayl-EY-l22">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="splashScreenViewController" customModule="FindMyParty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-img" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-OQ-xrV" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="1Fa-0g-Z1f"/>
+                                    <constraint firstAttribute="width" constant="350" id="VGE-gd-YzN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUR-cE-JV0">
+                                <rect key="frame" x="314" y="762.5" width="60" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IiH-In-QCV"/>
+                                    <constraint firstAttribute="width" constant="60" id="rnx-oe-5UZ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" backgroundImage="arrow.right.circle.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="YpN-qF-2rC" kind="show" id="Bct-z4-iWO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-txt-main" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkk-vc-D7N" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="57" y="143" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MGv-af-ZEb"/>
+                                    <constraint firstAttribute="width" constant="300" id="dTU-4D-Eqp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUR-cE-JV0" secondAttribute="bottom" constant="40" id="2fM-Vy-ebC"/>
+                            <constraint firstItem="uJg-OQ-xrV" firstAttribute="top" secondItem="Tkk-vc-D7N" secondAttribute="bottom" constant="30" id="Mxz-12-7M8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUR-cE-JV0" secondAttribute="trailing" constant="40" id="Uax-Nf-0Uh"/>
+                            <constraint firstItem="Tkk-vc-D7N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YYw-0o-RgQ"/>
+                            <constraint firstItem="uJg-OQ-xrV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZS-5H-yqS"/>
+                            <constraint firstItem="uJg-OQ-xrV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYI-MK-PMr"/>
+                            <constraint firstItem="uJg-OQ-xrV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pFR-0F-KEj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dcU-nS-HB8"/>
+                    <connections>
+                        <outlet property="heroImgView" destination="uJg-OQ-xrV" id="6jE-rb-zme"/>
+                        <outlet property="heroTxtView" destination="Tkk-vc-D7N" id="XQj-hp-wRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="ccu-L0-nbX">
+            <objects>
+                <viewController id="YpN-qF-2rC" customClass="onboardingViewController" customModule="FindMyParty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b6s-dg-mbB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-txt-main" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O27-AP-iHK" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="57" y="108" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="QTU-me-bm3"/>
+                                    <constraint firstAttribute="width" constant="300" id="riS-Tb-hmF"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PaF-gF-zhn">
+                                <rect key="frame" x="40" y="228" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aQJ-Zr-3Pn"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-Ri-LnZ">
+                                <rect key="frame" x="50" y="298" width="314" height="514"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="yBa-qw-oH9">
+                                <rect key="frame" x="157" y="832" width="100" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nvX-iX-bJ5"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemPurpleColor"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jiz-ZK-3vS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PaF-gF-zhn" firstAttribute="top" secondItem="O27-AP-iHK" secondAttribute="bottom" constant="20" id="1VI-wJ-CzF"/>
+                            <constraint firstItem="yBa-qw-oH9" firstAttribute="top" secondItem="EWu-Ri-LnZ" secondAttribute="bottom" constant="20" id="1Ze-rD-ocR"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="PaF-gF-zhn" secondAttribute="trailing" constant="40" id="BCv-qa-xfi"/>
+                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="50" id="Czp-hp-BhV"/>
+                            <constraint firstItem="PaF-gF-zhn" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="40" id="OjM-KH-AOW"/>
+                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="top" secondItem="PaF-gF-zhn" secondAttribute="bottom" constant="20" id="QP4-dn-DLm"/>
+                            <constraint firstItem="yBa-qw-oH9" firstAttribute="centerX" secondItem="b6s-dg-mbB" secondAttribute="centerX" id="Tis-4D-xXp"/>
+                            <constraint firstItem="O27-AP-iHK" firstAttribute="centerX" secondItem="b6s-dg-mbB" secondAttribute="centerX" id="Zwt-hu-U3f"/>
+                            <constraint firstItem="O27-AP-iHK" firstAttribute="top" secondItem="jiz-ZK-3vS" secondAttribute="top" constant="20" id="gc0-JC-OP5"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="bottom" secondItem="EWu-Ri-LnZ" secondAttribute="bottom" constant="50" id="izH-QL-311"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="EWu-Ri-LnZ" secondAttribute="trailing" constant="50" id="lLC-UD-Y9x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kec-2W-uHh"/>
+                    <connections>
+                        <outlet property="carouselImg" destination="EWu-Ri-LnZ" id="6ry-eD-Ald"/>
+                        <outlet property="loginProviderStackView" destination="PaF-gF-zhn" id="Phi-6e-4dP"/>
+                        <outlet property="pageCounter" destination="yBa-qw-oH9" id="HK5-5H-52n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GuN-Nu-jU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726.0869565217392" y="-144.64285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZZZ-iT-9IE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ayl-EY-l22" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kd5-0j-Cpg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KxR-UF-wxQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jc-af-qz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="1000" height="1000"/>
+        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="hero-img" width="1000" height="1000"/>
+        <image name="hero-txt-main" width="1000" height="1000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
