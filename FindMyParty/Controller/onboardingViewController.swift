@@ -6,62 +6,59 @@
 //
 
 import UIKit
-import AuthenticationServices
-class onboardingViewController: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+import Spring
+class onboardingViewController: UIViewController  {
     @IBOutlet weak var pageCounter: UIPageControl!
+    @IBOutlet weak var carouselImg: SpringImageView!
+    @IBOutlet weak var loginBtn: SpringButton!
+    @IBOutlet weak var signUpBtn: SpringButton!
     var i = 0;
-    
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return self.view.window!
-    }
-    
-
-    @IBOutlet weak var carouselImg: UIImageView!
-    @IBOutlet weak var loginProviderStackView: UIStackView!
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.hideNavBar()
+        self.loginBtn.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 5)
+        self.signUpBtn.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 5)
+        self.loginBtn.layer.cornerRadius = 10
+        self.signUpBtn.layer.cornerRadius = 10
+        
+        
+        
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSOAppleSignIn()
+        self.loginBtn.animation = "squeezeLeft"
+        self.signUpBtn.animation = "squeezeRight"
+        self.loginBtn.animate()
+        self.signUpBtn.animate()
+        
+        //setting up swiping for carousel
         carouselImg.layer.cornerRadius = 10
+        
+        let swipeGestureRecognizerLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipeLeft(_:)))
+        swipeGestureRecognizerLeft.direction = .left
+        
+
+        swipeGestureRecognizerLeft.direction = .left
         carouselImg.isUserInteractionEnabled = true
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        carouselImg.isUserInteractionEnabled = true
-        carouselImg.addGestureRecognizer(tapGestureRecognizer)
+        carouselImg.addGestureRecognizer(swipeGestureRecognizerLeft)
 
         
     }
-    func setupSOAppleSignIn() {
-        let btnAuthorization = ASAuthorizationAppleIDButton()
-        btnAuthorization.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
-        btnAuthorization.center = self.view.center
-        self.loginProviderStackView.addArrangedSubview(btnAuthorization)
-    }
-    @objc func actionHandleAppleSignin() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-            authorizationController.delegate = self
-            authorizationController.presentationContextProvider = self
-            authorizationController.performRequests()
-        }
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print(error.localizedDescription)
-    }
-     
-    // ASAuthorizationControllerDelegate function for successful authorization
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-           print("authorised-with-success")
-        }
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    @objc private func didSwipeLeft(_ sender: UISwipeGestureRecognizer) {
+        print("didSwipe")
+        self.carouselImg.animation = "slideRight"
+        self.carouselImg.animate()
         self.i+=1
         let imgNo = self.i%4
         let imgName = String(imgNo)+".png"
         self.pageCounter.currentPage = self.i%4
         self.carouselImg.image = UIImage(named: imgName)
+        self.carouselImg.animation = "slideLeft"
+        self.carouselImg.animate()
     }
+    
+
+
 
 }

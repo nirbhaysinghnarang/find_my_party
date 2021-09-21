@@ -22,7 +22,6 @@ pod "Google-Maps-iOS-Utils"
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 pod 'Alamofire', '~> 5.0.0-rc.3'
 pod 'Kingfisher'
-pod 'GoogleSignIn'
 pod 'ImageSlideshow', '~> 1.9.0'
 
 

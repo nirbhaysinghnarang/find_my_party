@@ -65,6 +65,95 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="lEp-jt-pQy">
+            <objects>
+                <viewController id="eNo-lK-9Tw" customClass="signUpViewController" customModule="FindMyParty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ta4-mG-v9y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrb-ay-fEG">
+                                <rect key="frame" x="30" y="118" width="88.5" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your email?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-2g-DXf">
+                                <rect key="frame" x="30" y="202.5" width="364" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Np-45-qR6" customClass="SpringTextField" customModule="Spring">
+                                <rect key="frame" x="30" y="241.5" width="354" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ahy-6n-rvy"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryR-pL-Y9B">
+                                <rect key="frame" x="57" y="336.5" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4j1-OO-liO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="BnE-r3-EQe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitTouched:" destination="eNo-lK-9Tw" eventType="touchUpInside" id="SWM-pL-XmL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aRY-h3-0YM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Np-45-qR6" firstAttribute="leading" secondItem="aRY-h3-0YM" secondAttribute="leading" constant="30" id="5TG-KH-crw"/>
+                            <constraint firstItem="aRY-h3-0YM" firstAttribute="trailing" secondItem="4GO-2g-DXf" secondAttribute="trailing" constant="20" id="FkF-bb-xJK"/>
+                            <constraint firstItem="ryR-pL-Y9B" firstAttribute="centerX" secondItem="ta4-mG-v9y" secondAttribute="centerX" id="FzP-De-W5a"/>
+                            <constraint firstItem="4GO-2g-DXf" firstAttribute="top" secondItem="hrb-ay-fEG" secondAttribute="bottom" constant="50" id="JA9-3D-Eyf"/>
+                            <constraint firstItem="0Np-45-qR6" firstAttribute="top" secondItem="4GO-2g-DXf" secondAttribute="bottom" constant="15" id="aEr-oj-O0a"/>
+                            <constraint firstItem="aRY-h3-0YM" firstAttribute="trailing" secondItem="0Np-45-qR6" secondAttribute="trailing" constant="30" id="aFY-mq-De3"/>
+                            <constraint firstItem="hrb-ay-fEG" firstAttribute="leading" secondItem="aRY-h3-0YM" secondAttribute="leading" constant="30" id="bkO-6l-aAv"/>
+                            <constraint firstItem="ryR-pL-Y9B" firstAttribute="top" secondItem="0Np-45-qR6" secondAttribute="bottom" constant="50" id="ehH-6H-NJr"/>
+                            <constraint firstItem="hrb-ay-fEG" firstAttribute="top" secondItem="aRY-h3-0YM" secondAttribute="top" constant="30" id="tDE-nQ-CZW"/>
+                            <constraint firstItem="4GO-2g-DXf" firstAttribute="leading" secondItem="aRY-h3-0YM" secondAttribute="leading" constant="30" id="xt0-4C-Qet"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FcG-cX-amx"/>
+                    <connections>
+                        <outlet property="inputPrompt" destination="4GO-2g-DXf" id="coc-98-GuP"/>
+                        <outlet property="inputTf" destination="0Np-45-qR6" id="qGQ-ej-R9X"/>
+                        <outlet property="submitBtn" destination="ryR-pL-Y9B" id="t8x-ia-DxD"/>
+                        <segue destination="pFP-gP-3hv" kind="show" id="fxX-t0-i5N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAI-IT-zzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JvI-Z5-Qai">
+            <objects>
+                <viewController id="pFP-gP-3hv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6V-YC-qOH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QmK-q5-f6H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AuL-5g-ir6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37h-iu-Uua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691" y="449"/>
+        </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="ccu-L0-nbX">
             <objects>
@@ -74,52 +163,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-txt-main" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O27-AP-iHK" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="57" y="108" width="300" height="100"/>
+                                <rect key="frame" x="20" y="108" width="374" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="QTU-me-bm3"/>
-                                    <constraint firstAttribute="width" constant="300" id="riS-Tb-hmF"/>
+                                    <constraint firstAttribute="height" constant="100" id="9Wt-Im-4Ac"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PaF-gF-zhn">
-                                <rect key="frame" x="40" y="228" width="334" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-Ri-LnZ" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="30" y="388" width="354" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="aQJ-Zr-3Pn"/>
+                                    <constraint firstAttribute="height" constant="350" id="xif-DD-oDc"/>
                                 </constraints>
-                            </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-Ri-LnZ">
-                                <rect key="frame" x="50" y="298" width="314" height="514"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="yBa-qw-oH9">
-                                <rect key="frame" x="157" y="832" width="100" height="28"/>
+                                <rect key="frame" x="137.5" y="798" width="139" height="59"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="nvX-iX-bJ5"/>
-                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemPurpleColor"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdX-4q-210">
+                                <rect key="frame" x="40" y="1128" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bR-74-MeD" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="20" y="218" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z8i-Pl-0eh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grd-Mf-0sp" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="20" y="288" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3u7-yL-z5x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eNo-lK-9Tw" kind="show" id="XE9-P1-P4b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jiz-ZK-3vS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PaF-gF-zhn" firstAttribute="top" secondItem="O27-AP-iHK" secondAttribute="bottom" constant="20" id="1VI-wJ-CzF"/>
-                            <constraint firstItem="yBa-qw-oH9" firstAttribute="top" secondItem="EWu-Ri-LnZ" secondAttribute="bottom" constant="20" id="1Ze-rD-ocR"/>
-                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="PaF-gF-zhn" secondAttribute="trailing" constant="40" id="BCv-qa-xfi"/>
-                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="50" id="Czp-hp-BhV"/>
-                            <constraint firstItem="PaF-gF-zhn" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="40" id="OjM-KH-AOW"/>
-                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="top" secondItem="PaF-gF-zhn" secondAttribute="bottom" constant="20" id="QP4-dn-DLm"/>
-                            <constraint firstItem="yBa-qw-oH9" firstAttribute="centerX" secondItem="b6s-dg-mbB" secondAttribute="centerX" id="Tis-4D-xXp"/>
-                            <constraint firstItem="O27-AP-iHK" firstAttribute="centerX" secondItem="b6s-dg-mbB" secondAttribute="centerX" id="Zwt-hu-U3f"/>
-                            <constraint firstItem="O27-AP-iHK" firstAttribute="top" secondItem="jiz-ZK-3vS" secondAttribute="top" constant="20" id="gc0-JC-OP5"/>
-                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="bottom" secondItem="EWu-Ri-LnZ" secondAttribute="bottom" constant="50" id="izH-QL-311"/>
-                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="EWu-Ri-LnZ" secondAttribute="trailing" constant="50" id="lLC-UD-Y9x"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="grd-Mf-0sp" secondAttribute="trailing" constant="20" id="8tj-bc-arW"/>
+                            <constraint firstItem="1bR-74-MeD" firstAttribute="top" secondItem="O27-AP-iHK" secondAttribute="bottom" constant="10" id="Exk-OB-A6e"/>
+                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="30" id="M9S-gN-vY2"/>
+                            <constraint firstItem="O27-AP-iHK" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="20" id="X22-cC-MYP"/>
+                            <constraint firstItem="grd-Mf-0sp" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="20" id="YhG-mD-W1S"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="1bR-74-MeD" secondAttribute="trailing" constant="20" id="Zwd-R5-bDV"/>
+                            <constraint firstItem="grd-Mf-0sp" firstAttribute="top" secondItem="1bR-74-MeD" secondAttribute="bottom" constant="20" id="fK4-py-Tfa"/>
+                            <constraint firstItem="yBa-qw-oH9" firstAttribute="centerX" secondItem="b6s-dg-mbB" secondAttribute="centerX" id="iwG-5F-naX"/>
+                            <constraint firstItem="O27-AP-iHK" firstAttribute="top" secondItem="jiz-ZK-3vS" secondAttribute="top" constant="20" id="lY0-Os-O5x"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="O27-AP-iHK" secondAttribute="trailing" constant="20" id="nRL-Sl-bYW"/>
+                            <constraint firstItem="EWu-Ri-LnZ" firstAttribute="top" secondItem="grd-Mf-0sp" secondAttribute="bottom" constant="50" id="pp7-Mp-HdF"/>
+                            <constraint firstItem="yBa-qw-oH9" firstAttribute="top" secondItem="EWu-Ri-LnZ" secondAttribute="bottom" constant="60" id="t1U-Pb-0rb"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="bottom" secondItem="yBa-qw-oH9" secondAttribute="bottom" constant="5" id="tbX-nL-84B"/>
+                            <constraint firstItem="jiz-ZK-3vS" firstAttribute="trailing" secondItem="EWu-Ri-LnZ" secondAttribute="trailing" constant="30" id="urd-bN-ZVh"/>
+                            <constraint firstItem="1bR-74-MeD" firstAttribute="leading" secondItem="jiz-ZK-3vS" secondAttribute="leading" constant="20" id="yiw-xR-AfM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kec-2W-uHh"/>
                     <connections>
                         <outlet property="carouselImg" destination="EWu-Ri-LnZ" id="6ry-eD-Ald"/>
-                        <outlet property="loginProviderStackView" destination="PaF-gF-zhn" id="Phi-6e-4dP"/>
+                        <outlet property="loginBtn" destination="1bR-74-MeD" id="dc7-9d-gfB"/>
                         <outlet property="pageCounter" destination="yBa-qw-oH9" id="HK5-5H-52n"/>
+                        <outlet property="signUpBtn" destination="grd-Mf-0sp" id="IRe-I3-DWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuN-Nu-jU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,11 +246,16 @@
         <!--Navigation Controller-->
         <scene sceneID="ZZZ-iT-9IE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ayl-EY-l22" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenKeyboardAppears="YES" id="ayl-EY-l22" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kd5-0j-Cpg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.52780533360000004" green="0.2786899317" blue="0.6983401119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

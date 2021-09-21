@@ -17,6 +17,7 @@
 		1C1EB16A26F5347300A4673C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1EB16826F5347300A4673C /* LaunchScreen.storyboard */; };
 		1C1EB17226F5368500A4673C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C1EB17126F5368500A4673C /* GoogleService-Info.plist */; };
 		1C1EB17426F53CC500A4673C /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB17326F53CC500A4673C /* AppUtils.swift */; };
+		1C2D008326F684D900963B3A /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D008226F684D900963B3A /* signUpViewController.swift */; };
 		1C77338726F54B370012C6A6 /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB17626F5414A00A4673C /* onboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1C1EB17126F5368500A4673C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C1EB17326F53CC500A4673C /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		1C1EB17626F5414A00A4673C /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingViewController.swift; sourceTree = "<group>"; };
+		1C2D008226F684D900963B3A /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		B26DDD3B92E2979B06F0A9CF /* Pods-FindMyParty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyParty.release.xcconfig"; path = "Target Support Files/Pods-FindMyParty/Pods-FindMyParty.release.xcconfig"; sourceTree = "<group>"; };
 		BB97CFE44381C6B6C905FA28 /* Pods_FindMyParty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyParty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66B6136DA75309ABDC7FBAD /* Pods-FindMyParty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyParty.debug.xcconfig"; path = "Target Support Files/Pods-FindMyParty/Pods-FindMyParty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +82,6 @@
 				1C1EB16B26F5347300A4673C /* Info.plist */,
 				1C1EB16326F5347200A4673C /* FindMyParty.xcdatamodeld */,
 				1C1EB17126F5368500A4673C /* GoogleService-Info.plist */,
-				1C1EB17326F53CC500A4673C /* AppUtils.swift */,
 			);
 			path = FindMyParty;
 			sourceTree = "<group>";
@@ -88,8 +89,10 @@
 		1C1EB17526F5412D00A4673C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1C1EB17326F53CC500A4673C /* AppUtils.swift */,
 				1C1EB15E26F5347200A4673C /* splashScreenViewController.swift */,
 				1C1EB17626F5414A00A4673C /* onboardingViewController.swift */,
+				1C2D008226F684D900963B3A /* signUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2D008326F684D900963B3A /* signUpViewController.swift in Sources */,
 				1C1EB17426F53CC500A4673C /* AppUtils.swift in Sources */,
 				1C1EB15F26F5347200A4673C /* splashScreenViewController.swift in Sources */,
 				1C1EB15B26F5347200A4673C /* AppDelegate.swift in Sources */,
