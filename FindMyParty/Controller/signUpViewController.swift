@@ -126,13 +126,20 @@ class signUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                     let userDic:[String:Any]=[
                                         "email":self.email,
                                         "name":self.name,
-                                        "photoURL":downloadUrl.absoluteString
+                                        "photoURL":downloadUrl.absoluteString,
+                                        "groupsCreated":[],
+                                        "groupsPartOf":[],
+                                        "partiesAttended":0
                                     ];
                 ref.setValue(userDic) { (error, ref) -> Void in
                                 if(error == nil){
                                   
                                     self.globHud.dismiss()
                                     showSuccess(msg: "Signed in with success!")
+                                    globalUser.email = self.email
+                                    globalUser.name = self.name
+                                    globalUser.photoURL = downloadUrl.absoluteString
+                                    
                                 }
                                 else{
                                     self.globHud.dismiss()

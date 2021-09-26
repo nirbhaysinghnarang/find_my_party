@@ -18,6 +18,7 @@
 		1C1EB17226F5368500A4673C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C1EB17126F5368500A4673C /* GoogleService-Info.plist */; };
 		1C1EB17426F53CC500A4673C /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB17326F53CC500A4673C /* AppUtils.swift */; };
 		1C2D008326F684D900963B3A /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D008226F684D900963B3A /* signUpViewController.swift */; };
+		1C5681B52700610600CEB065 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5681B42700610600CEB065 /* profileViewController.swift */; };
 		1C77338726F54B370012C6A6 /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB17626F5414A00A4673C /* onboardingViewController.swift */; };
 		1CD8DA7126F9BE700022AE65 /* MainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8DA7026F9BE700022AE65 /* MainUser.swift */; };
 		1CD8DA7326F9BEAA0022AE65 /* PartyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8DA7226F9BEAA0022AE65 /* PartyGroup.swift */; };
@@ -38,6 +39,7 @@
 		1C1EB17326F53CC500A4673C /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		1C1EB17626F5414A00A4673C /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingViewController.swift; sourceTree = "<group>"; };
 		1C2D008226F684D900963B3A /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		1C5681B42700610600CEB065 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		1CD8DA7026F9BE700022AE65 /* MainUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUser.swift; sourceTree = "<group>"; };
 		1CD8DA7226F9BEAA0022AE65 /* PartyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyGroup.swift; sourceTree = "<group>"; };
 		1CD8DA7426F9C11D0022AE65 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				1C1EB15E26F5347200A4673C /* splashScreenViewController.swift */,
 				1C1EB17626F5414A00A4673C /* onboardingViewController.swift */,
 				1C2D008226F684D900963B3A /* signUpViewController.swift */,
+				1C5681B42700610600CEB065 /* profileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				1C1EB15B26F5347200A4673C /* AppDelegate.swift in Sources */,
 				1C77338726F54B370012C6A6 /* onboardingViewController.swift in Sources */,
 				1CD8DA7126F9BE700022AE65 /* MainUser.swift in Sources */,
+				1C5681B52700610600CEB065 /* profileViewController.swift in Sources */,
 				1CD8DA7526F9C11D0022AE65 /* Party.swift in Sources */,
 				1C1EB15D26F5347200A4673C /* SceneDelegate.swift in Sources */,
 				1C1EB16526F5347200A4673C /* FindMyParty.xcdatamodeld in Sources */,
@@ -424,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49PCK3N6MT;
 				INFOPLIST_FILE = FindMyParty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49PCK3N6MT;
 				INFOPLIST_FILE = FindMyParty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
